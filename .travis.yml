@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - 14
 script:
-  - echo "Hello world!"
+  - npm test
 after_success:
 - npm run coverage
 - npm run coveralls
