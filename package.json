@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "mocha --exit",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc mocha test/*test.js",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "repository": {
     "type": "git",
