@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "node"
 script:
+  - sudo chmod -R a+rwx src/*
   - npm install
   - npm test
 after_success:
