@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 mocha --exit",
+    "test": "c8 --include src/*.js --all mocha --exit",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/.bin/coveralls.js",
     "coverage": "c8 report --reporter=text-lcov | coveralls"
   },
