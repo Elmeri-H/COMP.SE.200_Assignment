@@ -25,6 +25,7 @@ describe("toString", () => {
         expect(typeof toString({ a: "b" })).to.equal("string");
         expect(typeof toString({ a: 3 })).to.equal("string");
         expect(typeof toString({ a: { c: "b" } })).to.equal("string");
+        expect(typeof toString(Symbol.iterator)).to.equal("string");
     })
     it("returns '' when called with array of null", () => {
         expect(toString([null])).to.equal('');

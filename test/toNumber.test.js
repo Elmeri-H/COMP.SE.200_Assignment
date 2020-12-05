@@ -20,15 +20,17 @@ describe("toNumber", () => {
     it("returns 0 when called with '0'", () => {
         expect(toNumber('0')).to.equal(0);
     })
-    it("returns NaN when called with non-number strings", () => {
+    it("returns NaN when called with non-number inputs", () => {
         expect(toNumber('foo')).to.eql(NaN);
         expect(toNumber('bar')).to.eql(NaN);
+        expect(toNumber(Symbol.iterator)).to.eql(NaN);
+        expect(toNumber(() => "foo")).to.eql(NaN);
     })
     it("returns integer when called with string with number", () => {
         expect(toNumber('-5')).to.equal(-5);
         expect(toNumber('5')).to.equal(5);
     })
-    it("returns a typeof string when calling with object", () => {
+    it("returns NaN string when calling with object", () => {
         expect(toNumber({ a: "b" })).to.eql(NaN);
         expect(toNumber({ a: 3 })).to.eql(NaN);
         expect(toNumber({ a: { c: "b" } })).to.eql(NaN);

@@ -22,5 +22,6 @@ describe("toFinite", () => {
         expect(toFinite("123")).to.equal(123);
         expect(toFinite("-12")).to.equal(-12);
         expect(toFinite(-3)).to.equal(-3);
+        expect(toFinite(-Infinity)).to.equal(-1.7976931348623157e+308);
     })
 })
