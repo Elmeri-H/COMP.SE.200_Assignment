@@ -32,15 +32,11 @@ describe("Filter", () => {
                                                                      { 'user': 'frank',   'active': false, 'happy': true, 'age': 34 }]);
     })
     it("works with null, undefined and NaN values", () => {
-        expect(filter([null, null, undefined, NaN], () => null)).to.deep.equal([null, null]);
-        expect(filter([null, null, undefined, NaN], () => undefined)).to.deep.equal([undefined]);
-        expect(filter([null, null, undefined, NaN], () => NaN)).to.deep.equal([NaN]);
-
         const words = ['Foo', 'Bar', undefined, 'Lorem', 'Ipsum'];
-        expect(filter(words, () => String)).to.deep.equal(['Foo', 'Bar', 'Lorem', 'Ipsum']);
+        expect(filter(words, (value) => typeof value === "string")).to.deep.equal(['Foo', 'Bar', 'Lorem', 'Ipsum']);
 
-        const numbers = [1, 2, NaN, 3, 4];
-        expect(filter(numbers, () => Number)).to.deep.equal([1, 2, 3, 4]);
+        const numbers = [1, 2, NaN, 3, null, 4];
+        expect(filter(numbers, (value) => typeof value === "number")).to.deep.equal([1, 2, NaN, 3, 4]);
     })
     it("throws an error when called with faulty parameters", () => {
         expect(() => filter([1, 2, 3])).to.throw();
