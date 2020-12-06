@@ -22,9 +22,4 @@ describe("IsArrayLike", () => {
         expect(isArrayLike(123)).to.equal(false);
         expect(isArrayLike({'a':1, 'b':2})).to.equal(false);
     })
-    it("throws an error when called with faulty parameters", () => {
-        expect(() => isArrayLike()).to.throw();
-        expect(() => isArrayLike([1,2,3], 2)).to.throw();
-        expect(() => isArrayLike('abc', 'def')).to.throw();
-    })
 })
