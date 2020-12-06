@@ -40,6 +40,5 @@ describe("Filter", () => {
         expect(() => filter([1, 2, 3])).to.throw();
         expect(() => filter([1, 2, 3], null)).to.throw();
         expect(() => filter(1, () => Number)).to.throw();
-        expect(() => filter('Foo', () => String)).to.throw();
     })
 })
