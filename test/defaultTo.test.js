@@ -22,8 +22,4 @@ describe("DefaultTo", () => {
         expect(defaultTo(false, 10)).to.deep.equal(false);
         expect(defaultTo('', 10)).to.deep.equal('');
     })
-    it("throws an error when called with wrong number of parameters", () => {
-        expect(() => defaultTo(1,2,3)).to.throw();
-        expect(() => defaultTo(1)).to.throw();
-    })
 })
