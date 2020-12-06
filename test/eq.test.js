@@ -18,14 +18,6 @@ describe("Eq", () => {
         expect(eq(false, false)).to.equal(true);
         expect(eq(0, 0)).to.equal(true);
     })
-    it("works when comparing arrays", () => {
-        expect(eq([1,2,3], [1,2,3])).to.equal(true);
-        expect(eq(['Foo', 'Bar'], ['Foo', 'Bar'])).to.equal(true);
-        const object = { 'a': 1 };
-        const other = { 'a': 1 };
-        expect(eq([object, other], [object, other])).to.equal(false);
-        expect(eq([object], [object])).to.equal(true);
-    })
     it("works when comparing numbers", () => {
         expect(eq(12, 12)).to.equal(true);
         expect(eq(1, 2)).to.equal(false);
@@ -36,9 +28,5 @@ describe("Eq", () => {
         const other = { 'a': 1 };
         expect(eq(object.a, other.a)).to.equal(true);
         expect(eq(object.a, object.a)).to.equal(true);
-    })
-    it("throws an error when called with faulty parameters", () => {
-        expect(() => eq(1, 2, 3)).to.throw();
-        expect(() => eq(1)).to.throw();
     })
 })
