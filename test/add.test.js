@@ -25,8 +25,8 @@ describe("Add", () => {
         expect(add(0,-5)).to.eq(-5);
     });
     it("throws an error when called with illegal parameters", () => {
-        expect(add([1], [2])).to.throw();
-        expect(add({'a':1}, {'b':2})).to.throw();
-        expect(add('Foo', 'Bar')).to.throw();
+        expect(() => add([1], [2])).to.throw();
+        expect(() => add({'a':1}, {'b':2})).to.throw();
+        expect(() => add('Foo', 'Bar')).to.throw();
     })
 });
