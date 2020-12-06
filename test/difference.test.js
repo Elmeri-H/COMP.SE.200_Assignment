@@ -22,7 +22,6 @@ describe("Difference", () => {
         expect(() => difference(1, 1)).to.throw();
         expect(() => difference([1], 1)).to.throw();
         expect(() => difference(1, [1])).to.throw();
-        expect(() => difference([1, 2], [1, 3], [2, 3])).to.throw();
         expect(() => difference([1, 2])).to.throw();
     })
 })
