@@ -15,8 +15,8 @@ describe("Compact", () => {
         expect(compact(['   ', 0])).to.be.an('array').that.is.not.empty;
     })
     it("throws an error when called with illegal inputs", () => {
-        expect(() => compact({'a' : 1})).to.throw;
-        expect(() => compact('Foo Bar')).to.throw;
-        expect(() => compact(123)).to.throw;
+        expect(() => compact({'a' : 1})).to.throw();
+        expect(() => compact('Foo Bar')).to.throw();
+        expect(() => compact(123)).to.throw();
     })
 })

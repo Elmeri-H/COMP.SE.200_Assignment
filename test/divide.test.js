@@ -17,9 +17,9 @@ describe("Divide", () => {
         expect(divide(-6, -3)).to.equal(2);
     })
     it("throws an error when calling with illegal inputs", () => {
-        expect(divide([5, 0])).to.throw;
-        expect(divide(NaN, 0)).to.throw;
-        expect(divide(5, 1, 3)).to.throw;
-        expect(divide('Foo', 3)).to.throw;
+        expect(() => divide([5, 0])).to.throw();
+        expect(() => divide(NaN, 0)).to.throw();
+        expect(() => divide(5, 1, 3)).to.throw();
+        expect(() => divide('Foo', 3)).to.throw();
     })
 })

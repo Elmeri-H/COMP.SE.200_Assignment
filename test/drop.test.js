@@ -22,8 +22,8 @@ describe("Drop", () => {
         expect(drop([], 0)).to.deep.equal([]);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => drop([1,2,3])).to.throw;
-        expect(() => drop(1,2,3)).to.throw;
-        expect(() => drop([1,2,3], -2)).to.throw;
+        expect(() => drop([1,2,3])).to.throw();
+        expect(() => drop(1,2,3)).to.throw();
+        expect(() => drop([1,2,3], -2)).to.throw();
     })
 })

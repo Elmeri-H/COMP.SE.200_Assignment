@@ -43,9 +43,9 @@ describe("Filter", () => {
         expect(filter(numbers, () => Number)).to.deep.equal([1, 2, 3, 4]);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => filter([1, 2, 3])).to.throw;
-        expect(() => filter([1, 2, 3], null)).to.throw;
-        expect(() => filter(1, () => Number)).to.throw;
-        expect(() => filter('Foo', () => String)).to.throw;
+        expect(() => filter([1, 2, 3])).to.throw();
+        expect(() => filter([1, 2, 3], null)).to.throw();
+        expect(() => filter(1, () => Number)).to.throw();
+        expect(() => filter('Foo', () => String)).to.throw();
     })
 })

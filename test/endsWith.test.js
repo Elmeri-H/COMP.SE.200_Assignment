@@ -19,11 +19,11 @@ describe("endsWith", () => {
         expect(endsWith('abcdef', 'Foo')).to.equal(false);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => endsWith(undefined, 'd')).to.throw;
-        expect(() => endsWith(123, 3)).to.throw;
-        expect(() => endsWith(123, '3')).to.throw;
-        expect(() => endsWith(null, 'l')).to.throw;
-        expect(() => endsWith(NaN, NaN)).to.throw;
-        expect(() => endsWith('abc', 'c', -2)).to.throw;
+        expect(() => endsWith(undefined, 'd')).to.throw();
+        expect(() => endsWith(123, 3)).to.throw();
+        expect(() => endsWith(123, '3')).to.throw();
+        expect(() => endsWith(null, 'l')).to.throw();
+        expect(() => endsWith(NaN, NaN)).to.throw();
+        expect(() => endsWith('abc', 'c', -2)).to.throw();
     })
 })

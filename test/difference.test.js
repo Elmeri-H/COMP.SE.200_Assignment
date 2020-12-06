@@ -19,10 +19,10 @@ describe("Difference", () => {
         expect(difference([null, undefined, NaN], [null, NaN])).to.be.an('array').that.deep.equals([undefined]);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(difference(1, 1)).to.throw;
-        expect(difference([1], 1)).to.throw;
-        expect(difference(1, [1])).to.throw;
-        expect(difference([1, 2], [1, 3], [2, 3])).to.throw;
-        expect(difference([1, 2])).to.throw;
+        expect(() => difference(1, 1)).to.throw();
+        expect(() => difference([1], 1)).to.throw();
+        expect(() => difference(1, [1])).to.throw();
+        expect(() => difference([1, 2], [1, 3], [2, 3])).to.throw();
+        expect(() => difference([1, 2])).to.throw();
     })
 })

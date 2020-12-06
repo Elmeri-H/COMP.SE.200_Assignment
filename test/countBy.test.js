@@ -47,17 +47,17 @@ describe("CountBy", () => {
         const users = [
             'user', 'barney', {'active' : true}
         ]
-        expect(() => countBy(users, value => value.active)).to.throw
+        expect(() => countBy(users, value => value.active)).to.throw();
 
         const users2 = [
             { 'user': 'barney', 'active': true },
             { 'user': 'betty', 'active': undefined },
             { 'user': 'fred', 'active': false },
         ]
-        expect(() => countBy(users2, value => value.inactive)).to.throw
-        expect(() => countBy(users2)).to.throw
+        expect(() => countBy(users2, value => value.inactive)).to.throw();
+        expect(() => countBy(users2)).to.throw();
 
         const users3 = []
-        expect(() => countBy(users3, value => value.active)).to.throw
+        expect(() => countBy(users3, value => value.active)).to.throw();
     })
 })

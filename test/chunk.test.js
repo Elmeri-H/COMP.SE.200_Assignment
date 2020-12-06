@@ -16,9 +16,9 @@ describe("Chunk", () => {
         expect(chunk(['a', ['b', 'c'], 'd'], 3)).to.be.an('array').that.deep.includes(['a', ['b', 'c'], 'd']);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(chunk('Foo Bar', 3)).to.throw()
-        expect(chunk(13245, 2)).to.throw()
-        expect(chunk({'a': 1}, 2)).to.throw()
-        expect(chunk(['a', 'b', 'c', 'd'])).to.throw()
+        expect(() => chunk('Foo Bar', 3)).to.throw()
+        expect(() => chunk(13245, 2)).to.throw()
+        expect(() => chunk({'a': 1}, 2)).to.throw()
+        expect(() => chunk(['a', 'b', 'c', 'd'])).to.throw()
     })
 })

@@ -26,8 +26,8 @@ describe("isArrayLikeObject", () => {
         expect(isArrayLikeObject({length:"1", 'foo': 2})).to.equal(false);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => isArrayLikeObject()).to.throw;
-        expect(() => isArrayLikeObject([1,2,3], 2)).to.throw;
-        expect(() => isArrayLikeObject('abc', 'def')).to.throw;
+        expect(() => isArrayLikeObject()).to.throw();
+        expect(() => isArrayLikeObject([1,2,3], 2)).to.throw();
+        expect(() => isArrayLikeObject('abc', 'def')).to.throw();
     })
 })

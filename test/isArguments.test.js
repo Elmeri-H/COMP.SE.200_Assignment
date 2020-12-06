@@ -14,7 +14,7 @@ describe("isArguments", () => {
         expect(isArguments(function() {}())).to.equal(false);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => isArguments(2, 3)).to.throw;
-        expect(() => isArguments()).to.throw;
+        expect(() => isArguments(2, 3)).to.throw();
+        expect(() => isArguments()).to.throw();
     })
 })
