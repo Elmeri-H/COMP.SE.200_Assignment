@@ -11,8 +11,8 @@ describe("Words", () => {
         expect(words("")).to.eql([]);
     })
     it("throws an error when calling with illegal inputs", () => {
-        expect(() => words(undefined)).to.throw;
-        expect(() => words(null)).to.throw;
+        expect(() => words(undefined)).to.throw();
+        expect(() => words(null)).to.throw();
     })
     it("returns searched word", () => {
         expect(words("koira, kissa", "kissa")).to.eql(["kissa"]);
