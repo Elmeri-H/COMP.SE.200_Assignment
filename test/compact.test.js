@@ -12,7 +12,7 @@ describe("Compact", () => {
         .and.not.include(undefined).and.not.include(NaN);
     })
     it("recognizes stringified zeroes and whitespaces as not falsy", () => {
-        expect(compact(['   ', 0])).to.be.an('array').that.is.not.empty;
+        expect(compact([' ', '0'])).to.be.an('array').that.includes('0').and.includes(' ');
     })
     it("throws an error when called with illegal inputs", () => {
         expect(() => compact({'a' : 1})).to.throw();

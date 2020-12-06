@@ -25,8 +25,8 @@ describe("Capitalize", () => {
         expect(capitalize('fRED THURSDAY')).to.equal('Fred thursday');
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(camelCase(['Foo'])).to.throw();
-        expect(camelCase(123)).to.throw();
-        expect(camelCase({'Foo':'Bar'})).to.throw();
+        expect(() => capitalize(['Foo'])).to.throw();
+        expect(() => capitalize(123)).to.throw();
+        expect(() => capitalize({'Foo':'Bar'})).to.throw();
     })
 })
