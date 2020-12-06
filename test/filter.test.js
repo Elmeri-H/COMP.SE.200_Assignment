@@ -16,11 +16,9 @@ describe("Filter", () => {
     it("works with different types of arrays", () => {
         const words = ['Foo', 'Bar', 'Lorem', 'Ipsum'];
         expect(filter(words, () => String)).to.deep.equal(['Foo', 'Bar', 'Lorem', 'Ipsum']);
-        expect(filter(words, ({active}) => active)).to.equal([]);
 
         const numbers = [1, 2, 3, 4];
         expect(filter(numbers, () => Number)).to.deep.equal([1, 2, 3, 4]);
-        expect(filter(numbers, ({active}) => active)).to.equal([]);
 
         const users = [
             { 'user': 'barney', 'active': true, 'happy': true, 'age': 26 },
@@ -30,6 +28,8 @@ describe("Filter", () => {
           expect(filter(users, ({ active }) => active)).to.deep.equal([{ 'user': 'barney', 'active': true, 'happy': true, 'age': 26 }]);
           expect(filter(users, ({ happy }) => happy)).to.deep.equal([{ 'user': 'barney', 'active': true, 'happy': true, 'age': 26 },
                                                                      { 'user': 'frank',   'active': false, 'happy': true, 'age': 34 }]);
+        expect(filter(numbers, ({active}) => active)).to.equal([]);
+        expect(filter(words, ({active}) => active)).to.equal([]);
     })
     it("works with null, undefined and NaN values", () => {
         const words = ['Foo', 'Bar', undefined, 'Lorem', 'Ipsum'];
