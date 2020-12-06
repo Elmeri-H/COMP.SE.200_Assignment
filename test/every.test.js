@@ -31,8 +31,8 @@ describe("Every", () => {
         expect(every([NaN, NaN], NaN)).to.equal(true);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => every(1,2,Number)).to.throw;
-        expect(() => every('Foo', String)).to.throw;
-        expect(() => every(['Foo', 'Bar'])).to.throw;
+        expect(() => every(1,2,Number)).to.throw();
+        expect(() => every('Foo', String)).to.throw();
+        expect(() => every(['Foo', 'Bar'])).to.throw();
     })
 })

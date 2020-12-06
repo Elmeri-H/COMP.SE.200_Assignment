@@ -16,7 +16,7 @@ describe("UpperFirst", () => {
         expect(upperFirst(null)).to.eql("");
     })
     it("throws with input of only numbers", () => {
-        expect(() => upperFirst(123)).to.throw;
+        expect(() => upperFirst(123)).to.throw();
     })
     it("returns same string with string of only numbers", () => {
         expect(upperFirst("123")).to.eql("123");

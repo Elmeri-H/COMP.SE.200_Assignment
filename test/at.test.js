@@ -23,4 +23,9 @@ describe("At", () => {
         const object = { 'a': [{ 'b': { 'c': 3 } }, 4] };
         expect(at(object, ['a[0].b.c', 'a[1]'])).to.eql([3, 4])
     });
+    it("throws an error when called with faulty parameters", () => {
+        expect(at('Foo', [1])).to.throw();
+        expect(at(['Foo'], [0])).to.throw();
+        expect(at({})).to.throw();
+    })
 })

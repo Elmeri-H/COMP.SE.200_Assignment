@@ -38,7 +38,7 @@ describe("Eq", () => {
         expect(eq(object.a, object.a)).to.equal(true);
     })
     it("throws an error when called with faulty parameters", () => {
-        expect(() => eq(1, 2, 3)).to.throw;
-        expect(() => eq(1)).to.throw;
+        expect(() => eq(1, 2, 3)).to.throw();
+        expect(() => eq(1)).to.throw();
     })
 })
