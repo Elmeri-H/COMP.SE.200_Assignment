@@ -27,10 +27,4 @@ describe("Get", () => {
         const object4 = { 'a': [] }
         expect(get(object4, 'a[0]')).to.equal(undefined);
     })
-    it("throws an error when called with faulty parameters", () => {
-        expect(() => get('Foo', 'F')).to.throw();
-        expect(() => get({ 'a': [{ 'b': { 'c': 3 } }] })).to.throw();
-        expect(() => get({ 'a': [{ 'b': { 'c': 3 } }] }, 2)).to.throw();
-        expect(() => get([{ 'b': { 'c': 3 } }], 'b', undefined )).to.throw();
-    })
 })
